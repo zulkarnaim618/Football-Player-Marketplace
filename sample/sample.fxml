@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backgroundPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.homeController">
+   <children>
+      <AnchorPane fx:id="rightPane" layoutX="80.0" layoutY="10.0" prefHeight="700.0" prefWidth="49.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="profilePane" prefHeight="700.0" prefWidth="49.0" style="-fx-background-color: transparent;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane fx:id="profileContentPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #00008b; -fx-border-radius: 20; -fx-border-width: 2;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label fx:id="profileClubText" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="122.0" layoutY="89.0" prefHeight="33.0" prefWidth="396.0" text="Club Login" AnchorPane.bottomAnchor="545.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="596.0" AnchorPane.topAnchor="85.0">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="128.0" layoutY="125.0" prefHeight="37.0" prefWidth="388.0" text="only for server registered club" textFill="#9e9c9c" AnchorPane.bottomAnchor="526.0" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="604.0" AnchorPane.topAnchor="125.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="connectImage" layoutX="107.0" layoutY="221.0" prefHeight="386.0" prefWidth="459.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="604.0" AnchorPane.topAnchor="200.0" />
+                        <AnchorPane fx:id="loginPane" layoutX="576.0" layoutY="87.0" prefHeight="472.0" prefWidth="446.0" visible="false" AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="574.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="87.0">
+                           <children>
+                              <TextField fx:id="clubNameText" focusTraversable="false" layoutX="96.0" layoutY="213.0" prefHeight="44.0" prefWidth="252.0" promptText="Club name" style="-fx-background-color: transparent; -fx-border-color: grey; -fx-border-width: 0 0 1 0;" AnchorPane.bottomAnchor="213.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="96.0" AnchorPane.topAnchor="213.0">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <Label fx:id="connectLabel" alignment="CENTER" layoutX="241.0" layoutY="292.0" prefHeight="36.0" prefWidth="106.0" text="Connect" AnchorPane.bottomAnchor="142.0" AnchorPane.leftAnchor="168.0" AnchorPane.rightAnchor="168.0" AnchorPane.topAnchor="292.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="wrongClubLabel" layoutX="96.0" layoutY="257.0" prefHeight="18.0" prefWidth="252.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="195.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="96.0" AnchorPane.topAnchor="259.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="logoutPane" layoutX="586.0" layoutY="99.0" prefHeight="472.0" prefWidth="446.0" AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="574.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="87.0">
+                           <children>
+                              <Label fx:id="disconnectLabel" alignment="CENTER" layoutX="168.0" layoutY="294.0" prefHeight="36.0" prefWidth="106.0" text="Disconnect" AnchorPane.bottomAnchor="142.0" AnchorPane.leftAnchor="168.0" AnchorPane.rightAnchor="168.0" AnchorPane.topAnchor="292.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="clubImage" alignment="CENTER" layoutX="168.0" layoutY="55.0" prefHeight="36.0" prefWidth="106.0" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="122.0" AnchorPane.rightAnchor="122.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="clubImageLabel" alignment="CENTER" layoutX="132.0" layoutY="10.0" prefHeight="36.0" prefWidth="106.0" textFill="DARKBLUE" AnchorPane.bottomAnchor="210.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="220.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="functionPane" prefHeight="700.0" prefWidth="49.0" style="-fx-background-color: transparent;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane fx:id="functionRightPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #00008b; -fx-border-radius: 20; -fx-border-width: 2;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="900.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label id="searchPlayers" fx:id="searchPlayers" layoutX="2.0" layoutY="44.0" text="Search Players" textAlignment="CENTER" textFill="DARKBLUE" AnchorPane.bottomAnchor="576.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label id="searchClubs" fx:id="searchClubs" layoutX="22.0" layoutY="50.0" text="Search Clubs" textAlignment="CENTER" textFill="DARKBLUE" AnchorPane.bottomAnchor="525.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="101.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="searchContentPane" fx:id="searchContentPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 2;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <AnchorPane id="playerSearchContentPane" fx:id="playerSearchContentPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane id="playerSearchContainer" fx:id="playerSearchContainer" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 0 0 20 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="76.0">
+                                 <children>
+                                    <AnchorPane id="byNamePane" fx:id="byNamePane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ScrollPane hbarPolicy="NEVER" layoutX="214.0" layoutY="187.0" prefHeight="600.0" prefWidth="887.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" AnchorPane.bottomAnchor="19.1" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <VBox fx:id="byNameBox" prefHeight="580.0" prefWidth="887.0" style="-fx-background-color: red;">
+                                                   <children>
+                                                      <AnchorPane id="playerNameSearchPan" maxHeight="250.0" minHeight="250.0" prefHeight="250.0" style="-fx-background-color: transparent;">
+                                                         <children>
+                                                            <TextField fx:id="playerNameText" focusTraversable="false" layoutX="427.0" layoutY="82.0" prefHeight="32.0" prefWidth="198.0" promptText="Enter player name" style="-fx-border-color: black; -fx-border-width: 1;" AnchorPane.bottomAnchor="136.4" AnchorPane.leftAnchor="427.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="82.0">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Label fx:id="nameLabel" layoutX="301.0" layoutY="85.0" text="Player name" AnchorPane.bottomAnchor="139.8" AnchorPane.leftAnchor="301.0" AnchorPane.rightAnchor="499.80000000000007" AnchorPane.topAnchor="85.0">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="playerNameSearchLabel" style="-fx-background-color: green;" text="Search" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="160.0" />
+                                                            <Label fx:id="playerNameResetLabel" style="-fx-background-color: green;" text="Reset" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="462.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="160.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                    <AnchorPane id="byClubandCountryPane" fx:id="byClubandCountryPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="887.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" AnchorPane.bottomAnchor="19.1" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <VBox fx:id="byCountryBox" prefHeight="580.0" prefWidth="887.0" style="-fx-background-color: transparent;">
+                                                   <children>
+                                                      <AnchorPane id="playerNameSearchPan" maxHeight="250.0" minHeight="250.0" prefHeight="250.0" style="-fx-background-color: transparent;">
+                                                         <children>
+                                                            <TextField fx:id="playerCountryText" focusTraversable="false" layoutX="427.0" layoutY="82.0" prefHeight="32.0" prefWidth="198.0" promptText="Enter player country" style="-fx-border-color: black; -fx-border-width: 1;" AnchorPane.bottomAnchor="136.4" AnchorPane.leftAnchor="427.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="82.0">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Label fx:id="countryLabel" layoutX="301.0" layoutY="85.0" text="Country" AnchorPane.bottomAnchor="139.8" AnchorPane.leftAnchor="301.0" AnchorPane.rightAnchor="529.4000000000001" AnchorPane.topAnchor="85.0">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="playerCountrySearchLabel" style="-fx-background-color: green;" text="Search" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="160.0" />
+                                                            <Label fx:id="playerCountryResetLabel" style="-fx-background-color: green;" text="Reset" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="462.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="160.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                    <AnchorPane id="byPositionPane" fx:id="byPositionPane" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="887.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" AnchorPane.bottomAnchor="19.1" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <VBox fx:id="byPositionBox" prefHeight="580.0" prefWidth="887.0" style="-fx-background-color: transparent;">
+                                                   <children>
+                                                      <AnchorPane id="playerNameSearchPan" maxHeight="250.0" minHeight="250.0" prefHeight="250.0" style="-fx-background-color: transparent;">
+                                                         <children>
+                                                            <TextField fx:id="playerPositionText" focusTraversable="false" layoutX="427.0" layoutY="82.0" prefHeight="32.0" prefWidth="198.0" promptText="Enter player position" style="-fx-border-color: black; -fx-border-width: 1;" AnchorPane.bottomAnchor="136.4" AnchorPane.leftAnchor="427.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="82.0">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Label fx:id="positionLabel" layoutX="301.0" layoutY="85.0" text="Position" AnchorPane.bottomAnchor="139.8" AnchorPane.leftAnchor="301.0" AnchorPane.rightAnchor="529.4000000000001" AnchorPane.topAnchor="85.0">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="playerPositionSearchLabel" style="-fx-background-color: green;" text="Search" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="160.0" />
+                                                            <Label fx:id="playerPositionResetLabel" style="-fx-background-color: green;" text="Reset" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="462.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="160.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                    <AnchorPane id="bySalaryPane" fx:id="bySalaryPane" layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="887.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" AnchorPane.bottomAnchor="19.1" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <VBox fx:id="bySalaryBox" prefHeight="580.0" prefWidth="887.0" style="-fx-background-color: transparent;">
+                                                   <children>
+                                                      <AnchorPane id="playerNameSearchPan" maxHeight="250.0" minHeight="250.0" prefHeight="250.0" style="-fx-background-color: transparent;">
+                                                         <children>
+                                                            <TextField fx:id="minimumSalaryText" focusTraversable="false" layoutX="427.0" layoutY="82.0" prefHeight="32.0" prefWidth="198.0" promptText="Minimum salary" style="-fx-border-color: black; -fx-border-width: 1;" AnchorPane.bottomAnchor="136.4" AnchorPane.leftAnchor="427.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="82.0">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Label fx:id="salaryLabel" layoutX="245.0" layoutY="85.0" prefHeight="25.0" prefWidth="107.0" text="Weekly salary" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="236.0" AnchorPane.rightAnchor="544.0" AnchorPane.topAnchor="85.0">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="maximumSalaryText" focusTraversable="false" layoutX="427.0" layoutY="128.0" prefHeight="32.0" prefWidth="198.0" promptText="Maximum salary" style="-fx-border-color: black; -fx-border-width: 1;" AnchorPane.bottomAnchor="90.4" AnchorPane.leftAnchor="427.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="128.0">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Label fx:id="playerSalarySearchLabel" style="-fx-background-color: green;" text="Search" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="540.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="185.0" />
+                                                            <Label fx:id="playerSalaryResetLabel" style="-fx-background-color: green;" text="Reset" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="462.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="185.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                    <AnchorPane id="countrywisePlayerCountPane" fx:id="countrywisePlayerCountPane" layoutX="40.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="887.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" AnchorPane.bottomAnchor="19.1" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <VBox fx:id="countrywisePlayerCountBox" prefHeight="580.0" prefWidth="887.0" style="-fx-background-color: transparent;">
+                                                   <children>
+                                                      <AnchorPane id="playerNameSearchPan" maxHeight="250.0" minHeight="136.0" prefHeight="136.0" prefWidth="887.0" style="-fx-background-color: transparent;" />
+                                                   </children>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane id="playerMenu" fx:id="playerMenu" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20 20 0 0; -fx-border-width: 0 0 2 0; -fx-border-radius: 20 20 0 0; -fx-border-color: black;" AnchorPane.bottomAnchor="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label id="byName" fx:id="byName" layoutX="57.0" layoutY="50.0" text="By Name" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="750.0" AnchorPane.topAnchor="15.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="byClubandCountry" fx:id="byClubandCountry" layoutX="160.0" layoutY="29.0" text="By Country" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="560.0" AnchorPane.topAnchor="15.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="byPosition" fx:id="byPosition" layoutX="333.0" layoutY="29.0" text="By Position" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="420.0" AnchorPane.topAnchor="15.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="bySalary" fx:id="bySalary" layoutX="353.0" layoutY="56.0" text="By Salary" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="530.0" AnchorPane.rightAnchor="270.0" AnchorPane.topAnchor="15.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="countrywisePlayerCount" fx:id="countrywisePlayerCount" layoutX="468.0" layoutY="59.0" text="Countrywise Player Count" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="680.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="15.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane id="clubSearchContentPane" fx:id="clubSearchContentPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane id="clubSearchContainer" fx:id="clubSearchContainer" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 0 0 20 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="76.0">
+                                 <children>
+                                    <AnchorPane id="maximumSalaryPane" fx:id="maximumSalaryPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="887.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" AnchorPane.bottomAnchor="19.1" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <VBox fx:id="maximumSalaryBox" prefHeight="580.0" prefWidth="887.0" style="-fx-background-color: transparent;" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                    <AnchorPane id="maximumAgePane" fx:id="maximumAgePane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="887.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" AnchorPane.bottomAnchor="19.1" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <VBox fx:id="maximumAgeBox" prefHeight="580.0" prefWidth="887.0" style="-fx-background-color: transparent;" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                    <AnchorPane id="maximumHeightPane" fx:id="maximumHeightPane" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="887.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" AnchorPane.bottomAnchor="19.1" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <VBox fx:id="maximumHeightBox" prefHeight="580.0" prefWidth="887.0" style="-fx-background-color: transparent;" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                    <AnchorPane id="totalYearlySalaryPane" fx:id="totalYearlySalaryPane" layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label fx:id="totalYearlySalaryValue" alignment="CENTER" layoutX="200.0" layoutY="228.0" prefHeight="44.0" prefWidth="490.0" AnchorPane.bottomAnchor="328.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="228.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children></AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane id="clubMenu" fx:id="clubMenu" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20 20 0 0; -fx-border-width: 0 0 2 0; -fx-border-radius: 20 20 0 0; -fx-border-color: black;" AnchorPane.bottomAnchor="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label id="maximumSalary" fx:id="maximumSalary" layoutX="57.0" layoutY="50.0" text="Player(s) with maximum salary" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="650.0" AnchorPane.topAnchor="15.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="maximumAge" fx:id="maximumAge" layoutX="160.0" layoutY="29.0" text="Player(s) with maximum age" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="15.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="maximumHeight" fx:id="maximumHeight" layoutX="333.0" layoutY="29.0" text="Player(s) with maximum height" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="495.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="15.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="totalYearlySalary" fx:id="totalYearlySalary" layoutX="353.0" layoutY="56.0" text="Total yearly salary" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="730.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="15.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="marketPane" prefHeight="700.0" prefWidth="49.0" style="-fx-background-color: transparent;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane fx:id="marketRightPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #00008b; -fx-border-radius: 20; -fx-border-width: 2;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="900.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label id="buy" fx:id="buy" layoutX="2.0" layoutY="44.0" text="Buy" textAlignment="CENTER" textFill="DARKBLUE" AnchorPane.bottomAnchor="576.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label id="sell" fx:id="sell" layoutX="22.0" layoutY="50.0" text="Sell" textAlignment="CENTER" textFill="DARKBLUE" AnchorPane.bottomAnchor="525.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="101.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="marketContentPane" fx:id="marketContentPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 2;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <AnchorPane id="buyContentPane" fx:id="buyContentPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="887.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="19.1" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="19.1">
+                                 <content>
+                                    <VBox fx:id="buyBox" prefHeight="636.2" prefWidth="887.0" style="-fx-background-color: white;" />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane id="sellContentPane" fx:id="sellContentPane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="600.0" prefWidth="887.0" style="-fx-background-color: transparent; -fx-background-radius: 0 0 20 20;" AnchorPane.bottomAnchor="19.1" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="19.1">
+                                 <content>
+                                    <VBox fx:id="sellBox" prefHeight="636.2" prefWidth="887.0" style="-fx-background-color: white;" />
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="settingsPane" layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="49.0" style="-fx-background-color: transparent;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane fx:id="settingsRightPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: #00008b; -fx-border-radius: 20; -fx-border-width: 2;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="900.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label id="theme" fx:id="theme" layoutX="2.0" layoutY="44.0" text="Theme" textAlignment="CENTER" textFill="DARKBLUE" AnchorPane.bottomAnchor="576.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label id="customTheme" fx:id="customTheme" layoutX="12.0" layoutY="62.0" text="Custom Theme" textAlignment="CENTER" textFill="DARKBLUE" AnchorPane.bottomAnchor="525.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="101.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane id="settingsContentPane" fx:id="settingsContentPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 2;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <AnchorPane id="themeContentPane" fx:id="themeContentPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="darkModeTextLabel" prefHeight="25.0" prefWidth="118.0" text="Dark Mode" AnchorPane.bottomAnchor="580.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="680.0" AnchorPane.topAnchor="66.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="darkModeLabel" alignment="CENTER" prefHeight="25.0" prefWidth="118.0" text="On" AnchorPane.bottomAnchor="582.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="68.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lightModeTextLabel" layoutX="100.0" layoutY="76.0" prefHeight="25.0" prefWidth="118.0" text="Light Mode" AnchorPane.bottomAnchor="520.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="680.0" AnchorPane.topAnchor="126.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lightModeLabel" alignment="CENTER" layoutX="250.0" layoutY="78.0" prefHeight="25.0" prefWidth="118.0" text="On" AnchorPane.bottomAnchor="522.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="600.0" AnchorPane.topAnchor="128.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane id="customThemeContentPane" fx:id="customThemeContentPane" layoutX="12.0" layoutY="12.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="colorPickerLabelPane" layoutX="210.0" layoutY="40.0" prefHeight="573.0" prefWidth="292.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="15.0">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="90.0" text="Background Color" AnchorPane.bottomAnchor="540.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="90.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="13.0" layoutY="130.0" text="Left Bar Color" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="130.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="13.0" layoutY="170.0" text="Right Bar Color" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="170.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="429.0" layoutY="170.0" text="Right Bar Hover Color" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="425.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="170.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="11.0" layoutY="210.0" text="Right Bar Font Color" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="210.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="427.0" layoutY="210.0" text="Right Bar Font Clicked Color" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="425.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="210.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="190.0" text="Top Menu Color" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="250.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="426.0" layoutY="250.0" text="Top Menu Hover Color" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="425.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="250.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="12.0" layoutY="290.0" text="Top Menu Font Color" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="290.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="428.0" layoutY="290.0" text="Top Menu Font Clicked Color" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="425.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="290.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="12.0" layoutY="330.0" text="Content Background Color" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="330.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="12.0" layoutY="370.0" text="Player Card Color" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="370.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="428.0" layoutY="370.0" text="Player Card Hover Color" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="425.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="370.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="12.0" layoutY="410.0" text="Player Card Font Color" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="410.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="12.0" layoutY="450.0" text="Button Color" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="450.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="12.0" layoutY="490.0" text="Text Field Color" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="490.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="12.0" layoutY="530.0" text="Text Color" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="530.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="colorPickerPane" layoutX="180.0" layoutY="48.0" prefHeight="573.0" prefWidth="292.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="15.0">
+                                 <children>
+                                    <ColorPicker fx:id="backgroundColorPicker" layoutX="75.0" layoutY="90.0" AnchorPane.bottomAnchor="540.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="90.0" />
+                                    <ColorPicker fx:id="leftBarColorPicker" layoutX="75.0" layoutY="130.0" AnchorPane.bottomAnchor="500.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="130.0" />
+                                    <ColorPicker fx:id="rightBarColorPicker" layoutX="75.0" layoutY="170.0" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="170.0" />
+                                    <ColorPicker fx:id="rightBarClickedColorPicker" layoutX="480.0" layoutY="170.0" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="480.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="170.0" />
+                                    <ColorPicker fx:id="rightBarFontColorPicker" layoutX="75.0" layoutY="210.0" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="210.0" />
+                                    <ColorPicker fx:id="rightBarFontClickedColorPicker" layoutX="480.0" layoutY="210.0" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="480.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="210.0" />
+                                    <ColorPicker fx:id="contentBarColorPicker" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="250.0" />
+                                    <ColorPicker fx:id="contentBarClickedColorPicker" layoutX="480.0" layoutY="250.0" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="480.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="250.0" />
+                                    <ColorPicker fx:id="contentBarFontColorPicker" layoutX="75.0" layoutY="290.0" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="290.0" />
+                                    <ColorPicker fx:id="contentBarFontClickedColorPicker" layoutX="480.0" layoutY="290.0" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="480.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="290.0" />
+                                    <ColorPicker fx:id="contentPaneColorPicker" layoutX="75.0" layoutY="330.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="330.0" />
+                                    <ColorPicker fx:id="playerCardColorPicker" layoutX="75.0" layoutY="370.0" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="370.0" />
+                                    <ColorPicker fx:id="playerCardHoverColorPicker" layoutX="480.0" layoutY="370.0" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="480.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="370.0" />
+                                    <ColorPicker fx:id="playerCardFontColorPicker" layoutX="75.0" layoutY="410.0" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="410.0" />
+                                    <ColorPicker fx:id="buttonColorPicker" layoutX="75.0" layoutY="450.0" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="450.0" />
+                                    <ColorPicker fx:id="textFieldColorPicker" layoutX="75.0" layoutY="490.0" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="490.0" />
+                                    <ColorPicker fx:id="textColorPicker" layoutX="75.0" layoutY="530.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="425.0" AnchorPane.topAnchor="530.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="leftPane" layoutX="114.0" layoutY="140.0" prefHeight="700.0" prefWidth="70.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="1120.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <AnchorPane fx:id="smallHinge" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: green;" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="340.0" />
+            <Label id="topLabel" fx:id="topLabel" layoutY="148.0" prefHeight="71.0" prefWidth="78.0" style="-fx-background-color: white; -fx-alignment: center;" textAlignment="CENTER" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="160.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="profileLabel" fx:id="profileLabel" prefHeight="71.0" prefWidth="78.0" style="-fx-background-color: white; -fx-alignment: center;" textAlignment="CENTER" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="220.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Profile" />
+               </tooltip>
+            </Label>
+            <Label id="functionLabel" fx:id="functionLabel" layoutX="-6.0" layoutY="70.0" prefHeight="71.0" prefWidth="78.0" style="-fx-background-color: white; -fx-alignment: center;" textAlignment="CENTER" AnchorPane.bottomAnchor="340.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="280.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Search" />
+               </tooltip>
+            </Label>
+            <Label id="marketLabel" fx:id="marketLabel" layoutX="-4.0" layoutY="141.0" prefHeight="71.0" prefWidth="78.0" style="-fx-background-color: white; -fx-alignment: center;" textAlignment="CENTER" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="340.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Market" />
+               </tooltip>
+            </Label>
+            <Label id="settingsLabel" fx:id="settingsLabel" layoutX="-4.0" layoutY="212.0" prefHeight="71.0" prefWidth="78.0" style="-fx-background-color: white; -fx-alignment: center;" textAlignment="CENTER" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="400.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Settings" />
+               </tooltip>
+            </Label>
+            <Label id="bottomLabel" fx:id="bottomLabel" layoutX="-4.0" layoutY="460.0" prefHeight="71.0" prefWidth="78.0" style="-fx-background-color: white; -fx-alignment: center;" textAlignment="CENTER" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="460.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="popup" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="946.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="617.0">
+         <children>
+            <Label fx:id="popupText" prefHeight="50.0" prefWidth="218.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+            <Label fx:id="popupButton" alignment="TOP_CENTER" text="x" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="194.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
